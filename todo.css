@@ -1,0 +1,78 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+}
+body{
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(90deg,rgb(67, 12, 118),rgb(144, 56, 227),rgb(67, 12, 118));
+    background-repeat: no-repeat;
+}
+h1{
+    text-align: center;
+    margin: 8px auto 8px;
+}
+h2{
+    text-align: center;
+    margin: 8px auto 8px;
+
+}
+form{
+    margin: 4px auto 4px;
+    background-color: blueviolet;
+    width: 688px;
+    display: flex;
+    height: 40px;
+    border-radius: 25px;
+    overflow: hidden;
+    justify-content: center;
+    /* align-items: center; */
+}
+form input{
+    font-size: 16px;
+    padding: 0px 0px 0px 18px;
+    border: none;
+    outline: none;
+   flex: 1;
+   max-width: 600px;
+}
+form button{
+    font-size: 26px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    flex: 1;
+    max-width: 90px;
+
+}
+.container-item{
+    display: flex;
+border-radius: 0px 15px 0px 15px;
+    width: 688px;
+    margin: 6px auto 4px;
+    justify-content: center;
+    align-items: center;
+    background:white;
+    height: 40px;
+}
+.container-item-btn{
+    outline: none;
+    border: none;
+  width: 90px;
+    height: inherit;
+    cursor: pointer;
+    background:transparent;
+}
+.task{
+    /* text-decoration:line-through; */
+    text-align: center;
+    padding: 0px 0px 0px 18px;
+    flex: 1;
+}
+.check{
+    margin-left: 14px;
+   
+}

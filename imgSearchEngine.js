@@ -3,6 +3,7 @@ const searchBox=document.getElementById("search-box");
 const searchResult=document.getElementById("search-result");
 const showMoreBtn =document.getElementById("show-more-btn");
 const accessKey ="tMJ0-eIgBHEGejm1syHopR9FYuG4CkGntTMrw93rSCk";
+const searchBtn=document.getElementById("search-btn");
 
 
 
@@ -16,9 +17,7 @@ const url=`https://api.unsplash.com/search/photos?page=${page}&query=${keyword}&
 const response=await fetch(url);
 const data =await response.json();
 const results= data.results;
-if(page===1){
-    searchBox.innerHTML="";
-}
+
 
 results.map((result) =>{
     const image =document.createElement("img");
@@ -31,11 +30,11 @@ results.map((result) =>{
 
 
 })
-showMoreBtn.style.display="block";
-showMoreBtn.addEventListener("click",()=>{
-    page++;
-    searchImage()
-})
+if(page===1){
+    searchBox.innerHTML=' ';
+    console.log("heu=y there")
+}
+
 
 }
 searchForm.addEventListener("submit",(e) =>{
@@ -45,3 +44,14 @@ searchForm.addEventListener("submit",(e) =>{
    
 
 })
+
+showMoreBtn.addEventListener("click",()=>{
+    page++;
+    searchImage()
+})
+searchBtn.addEventListener("click",()=>{
+    
+    searchImage()
+})
+
+
