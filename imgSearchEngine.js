@@ -30,11 +30,11 @@ results.map((result) =>{
 
 
 })
-if(page===1){
-    searchBox.innerHTML=' ';
-    console.log("heu=y there")
-}
-
+showMoreBtn.style.display="block";
+showMoreBtn.addEventListener("click",()=>{
+    page++;
+    searchImage()
+})
 
 }
 searchForm.addEventListener("submit",(e) =>{
@@ -44,14 +44,3 @@ searchForm.addEventListener("submit",(e) =>{
    
 
 })
-
-showMoreBtn.addEventListener("click",()=>{
-    page++;
-    searchImage()
-})
-searchBtn.addEventListener("click",()=>{
-    
-    searchImage()
-})
-
-
