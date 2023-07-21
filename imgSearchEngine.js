@@ -31,11 +31,7 @@ results.map((result) =>{
 
 
 })
-showMoreBtn.style.display="block";
-showMoreBtn.addEventListener("click",()=>{
-    page++;
-    searchImage()
-})
+
 
 }
 searchForm.addEventListener("submit",(e) =>{
@@ -44,4 +40,9 @@ searchForm.addEventListener("submit",(e) =>{
     searchImage();
    
 
+})
+showMoreBtn.style.display="block";
+showMoreBtn.addEventListener("click",()=>{
+    page++;
+    searchImage()
 })
