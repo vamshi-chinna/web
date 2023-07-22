@@ -27,9 +27,15 @@ function addElementFunction() {
 
     result.value = " "
     function checkbox(){
-        
-        task.style.textDecoration="line-through"
-        console.log("done")
+       
+        if(check.checked){
+            task.style.textDecoration="line-through"
+            console.log("done")
+        }
+        else{
+            task.style.textDecoration="none"
+        }
+      
     }
     check.addEventListener("click",(e)=>{
         e.preventDefault

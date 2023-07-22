@@ -8,7 +8,7 @@ body{
     overflow: hidden;
     height: 100vh;
     width: 100vw;
-    background: linear-gradient(90deg,rgb(67, 12, 118),rgb(144, 56, 227),rgb(67, 12, 118));
+    background: linear-gradient(150deg,rgb(67, 12, 118),rgb(144, 56, 227),rgb(67, 12, 118));
     background-repeat: no-repeat;
 }
 h1{

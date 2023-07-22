@@ -10,20 +10,27 @@ const searchBtn=document.getElementById("search-btn");
 let keyword="";
 
 let page= 1;
+
+
 async function searchImage (){
     keyword=searchBox.value
 
-const url=`https://api.unsplash.com/search/photos?page=${page}&query=${keyword}&client_id=${accessKey}&per_page=2`
+const url=`https://api.unsplash.com/search/photos?page=${page}&query=${keyword}&client_id=${accessKey}&per_page=12`
 const response=await fetch(url);
 const data =await response.json();
-const results= data.results;
+if(page === 1){
+    searchResult.innerHTML="";
+    console.log("done")
+}
 
+console.log(data)
+const results= data.results;
 
 results.map((result) =>{
     const image =document.createElement("img");
     image.src =result.urls.small;
     const imagelink = document.createElement("a");
-    imagelink.href =result.links.small;
+    imagelink.href =result.links.html;
     imagelink.target="_blank";
     imagelink.appendChild(image);
     searchResult.appendChild(imagelink);
@@ -31,10 +38,7 @@ results.map((result) =>{
 
 })
 showMoreBtn.style.display="block";
-showMoreBtn.addEventListener("click",()=>{
-    page++;
-    searchImage()
-})
+
 
 }
 searchForm.addEventListener("submit",(e) =>{
@@ -43,4 +47,8 @@ searchForm.addEventListener("submit",(e) =>{
     searchImage();
    
 
+})
+showMoreBtn.addEventListener("click",()=>{
+    page++;
+    searchImage()
 })
