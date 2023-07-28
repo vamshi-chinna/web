@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lumanosimo&display=swap');
+
 *{
     box-sizing: border-box;
     padding: 0;
@@ -5,6 +7,7 @@
     
 }
 body{
+    font-family: 'Lumanosimo', cursive;
     overflow: hidden;
     height: 100vh;
     width: 100vw;
@@ -12,6 +15,7 @@ body{
     background-repeat: no-repeat;
 }
 h1{
+    text-shadow:  3px 3px 3px rgb(37, 3, 69) ;
     text-align: center;
     margin: 8px auto 8px;
 }
@@ -21,6 +25,7 @@ h2{
 
 }
 form{
+    box-shadow: 6px  15px 15px;
     margin: 4px auto 4px;
     background-color: blueviolet;
     width: 688px;
@@ -32,6 +37,7 @@ form{
     /* align-items: center; */
 }
 form input{
+    
     font-size: 16px;
     padding: 0px 0px 0px 18px;
     border: none;
@@ -49,8 +55,10 @@ form button{
 
 }
 .container-item{
+    overflow: hidden;
+    box-shadow:  15px 15px 15px;
     display: flex;
-border-radius: 0px 15px 0px 15px;
+border-radius: 15px 15px 15px 15px;
     width: 688px;
     margin: 6px auto 4px;
     justify-content: center;
@@ -58,7 +66,7 @@ border-radius: 0px 15px 0px 15px;
     background:white;
     height: 40px;
 }
-.container-item-btn{
+.rmbtn{
     outline: none;
     border: none;
   width: 90px;
@@ -66,7 +74,14 @@ border-radius: 0px 15px 0px 15px;
     cursor: pointer;
     background:transparent;
 }
+.rmbtn:hover{
+    background-color: rgb(239 239 239);
+  
+}
 .task{
+    font-size: large;
+    font-weight: bold;
+
     /* text-decoration:line-through; */
     text-align: center;
     padding: 0px 0px 0px 18px;

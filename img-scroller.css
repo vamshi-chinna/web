@@ -53,6 +53,15 @@ filter: saturate(8) ;
     height: 30em;
 
 }
+main p{
+    width: 80vw;
+    margin: auto;
+}
+main h1{
+    width: 80vw;
+    margin: auto;
+}
+
 @keyframes anime {
     0%{
         transform: translateX(0vw);
