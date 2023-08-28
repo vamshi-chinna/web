@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100%;
+            display: grid;
+            grid-template-columns: auto auto  auto;
+            grid-template-rows: auto auto;
+            justify-content: space-around;
+            align-items: center;
+        }
+        #label{
+            font-size:26px ;
+        }
+        button {
+            border: none;
+            position: relative;
+            top: -18px;;
+            width: 200px;
+            height: 40px;
+            background: #ff4848;
+            color: white;
+            box-shadow: 6px 6px 10px rgba(52, 50, 50, 0.541);
+        }
+        .btn{
+            padding:1px auto 3px ;
+            position: relative;
+            top: 50%;
+            margin: 50px;
+            
+            display: flex;
+            flex-direction: column;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <div class="btn">
+        <label >OnMouseout:</label>
+        <p>mouse over to change button background color</p>
+            <button  id="mouseover">mouseover</button>
+    </div>
+    <div  class="btn">
+        <label >OnMouseout:</label>
+        <p>mouse out to change button background color</p>
+        <button id="mouseout">mouseout</button>
+    </div>
+    <div  class="btn">
+        <label >Onclick:</label>
+        <p>click to change button background color</p>
+        <button id="onclick">onclick</button>
+    </div>
+    <div  class="btn">
+        <label >Ondblclick:</label>
+        <p>Double click to change button background color</p>
+        <button id="ondblclick">ondblclick</button>
+    </div>
+    <div  class="btn">
+        <label >Onfocus:</label>
+        <p>click to change button background color</p>
+        <button id="onfocus">onfocus</button>
+    </div>
+    <div  class="btn">
+        <label >Onblur:</label>
+        <p>change Lower case to uppercase onblure Event</p>
+        <button id="onblur">onblur</button>
+    </div>
+    
+    <script>
+const Over=document.getElementById("mouseover")
+const Out=document.getElementById("mouseout")
+const Click=document.getElementById("onclick")
+const Dblclick=document.getElementById("ondblclick")
+const Focus=document.getElementById("onfocus")
+const Blur=document.getElementById("onblur")
+Over.addEventListener("mouseover",(e)=>{
+if(e.target===mouseover){
+    Over.style.background= "green";
+}})
+Out.addEventListener("mouseout",(e)=>{
+   
+    e.target.style.background= "green";
+   
+})
+
+Click.addEventListener("click",(e)=>{
+    
+   
+        e.target.style.backgroundColor = "green";
+    
+})
+Dblclick.addEventListener("dblclick",(e)=>{
+    e.target.style.background= "green";
+
+})
+Focus.addEventListener("focus",(e)=>{
+e.target.style.background="green";
+})
+
+Focus.addEventListener("blur", (event) => {
+    event.target.style.background = "";
+    Blur.innerHTML="on blur".toUpperCase();
+})
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color: blueviolet;
+            text-decoration: underline;
+            text-align: center;
+        }
+      form{
+        color: white    ;
+        margin: 1px auto 1px;
+        width: 700px;
+        background:blueviolet;
+        /* text-align: center; */
+        display: flex;
+        flex-direction: column;
+      }
+      .formitem{
+        margin: 5px auto auto 5px;
+      }
+      label{
+        display: inline-block;
+        width: 150px;
+      }
+      select{
+        width: 170px;
+        text-align: center;
+      }
+      span{
+        margin-left: 153px;
+      }
+    
+      table{
+        display: inline-block;
+        border-collapse: collapse;
+        border: 1px solid black;
+        padding: 5px;
+      }
+      th{
+       display: flex;
+      }
+    
+    </style>
+</head>
+<body>
+    <h1>STUDENT REGISTRATION FORM</h1>
+    <form action="#">
+    <div class="formitem">
+        <label >FIRST NAME</label>
+    <input type="text" >
+    (max 30 characters a-z and A-Z)
+    </div>
+    <div class="formitem">
+        <label >LAST NAME</label>
+    <input type="text" >
+    (max 30 characters a-z and A-Z)
+    </div>
+    <div class="formitem">
+        <label >DATE OF BIRTH </label>
+    <input type="date" >
+    
+    </div>
+    <div class="formitem">
+        <label >EMAIL</label>
+    <input type="email" >
+   
+    </div>
+    <div class="formitem">
+        <label >MOBILE NUMBER</label>
+    <input type="number" max="10" >
+    (max 10 number)
+   
+    </div>
+    <div class="formitem">
+        <label >GENDER</label>
+    Male <input type="radio" name="gender">
+    Female <input type="radio" name="gender" >
+    
+    </div>
+    <div class="formitem">
+        <label >ADDRESS</label>
+    <textarea  cols="30" rows="5"></textarea>
+   
+    </div>
+    <div class="formitem">
+        <label >CITY</label>
+    <input type="text"  maxlength="30">
+    (max 30 characters a-z and A-Z)
+    </div>
+    <div class="formitem">
+        <label >PIN CODE</label>
+    <input type="number" max="6">
+    (6 digit number)
+    </div>
+    <div class="formitem">
+        <label >STATE</label>
+    <input type="text"  maxlength="30">
+    (max 30 characters a-z and A-Z)
+    </div>
+    <div class="formitem">
+        <label >CONTRY</label>
+    <select  >
+        <option >india</option>
+    </select>
+    
+    </div>
+    <div class="formitem">
+        <label >HOBBIES</label>
+        
+        Drawing<input type="checkbox" >
+        Singing<input type="checkbox" >
+        Dancing<input type="checkbox" >
+        Sketching<input type="checkbox" >
+        <br>   
+       <span> others<input type="text" ></span>
+    </div>
+    <div class="formitem">
+        <label >QULIFICATION</label>
+<table >
+    <tr>
+    <th>SL.No.Examination</th>
+    <th>Board</th>
+    <th>Percentage</th>
+</tr>
+</table>
+    </div>
+</form>
+</body>
+</html>

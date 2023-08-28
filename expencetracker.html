@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expence-tracker</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(125deg, #ff000098, rgba(0, 0, 255, 0.581), rgba(0, 128, 0, 0.562), rgba(255, 255, 255, 0.627), rgba(192, 192, 192, 0.66), rgba(0, 128, 0, 0.457), rgba(0, 0, 255, 0.496), #ff0000a3);
+            height: 100vh;
+            width: 100vw;
+
+        }
+
+        input {
+            height: 30px;
+            width: 250px;
+        }
+
+        button {
+            padding: 9px;
+
+        }
+
+        ul,p{width: 259px;
+            height: fit-content;
+            border:2px solid rgba(255, 255, 255, 0.603);
+            background-color: antiquewhite;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <input type="number" name="" id="expences" placeholder="Enter your expences">
+        <button type="submit">add expences</button>
+    </form>
+
+    <ul id="expenceList">
+
+    </ul>
+    <p id="total">The total is:</p>
+    <script>
+        const total = document.getElementById('total');
+        const ulelem = document.getElementById("expenceList");
+        const form = document.querySelector('form');
+        const addExpences = document.getElementById('expences');
+        const btn = document.querySelector("button")
+        let sumExpences = 0;
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            if (addExpences === "" ) {
+                    alert("please enter the value of expenses ")
+                }
+            
+            else {
+                const li = document.createElement("li");
+                li.innerHTML = addExpences.value;
+                let liElem = ulelem.append(li);
+                sumExpences += parseInt(addExpences.value);
+                total.innerHTML=`The total is:${sumExpences}`
+                addExpences.value = "";
+            }
+
+        })
+
+
+
+    </script>
+</body>
+
+</html>
