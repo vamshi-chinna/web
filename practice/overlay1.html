@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    div{
+        overflow: hidden;
+       width: 400px;
+    position: relative;
+    top: 100px;
+    left: 400px;
+    /* clip-path: circle(200px); */
+    filter:drop-shadow(-12px -13px 4px rgba(40, 33, 33, 0.546));
+      
+
+    }
+    .certun{
+        position: absolute;
+        top: 0;
+        left: 0;
+       width: 400px;
+       height: 400px;
+       background: #000;
+       color: white;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       font-size: 30px;
+       
+
+    }
+    img{
+       width: 400px;
+       height: 400px;
+
+    }
+    div:active .certun{
+        transform: translateY(-400px);
+        transition: 2s;
+    }
+    
+</style>
+<body>
+    <div>
+        <div class="certun">Hello there!</div>
+        <img src="/IMG/severin-hoin-jkM4W3VnfHg-unsplash.jpg" alt="" srcset="" width="200px"
+    </div>
+</body>
+</html>

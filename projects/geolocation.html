@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>geolocation</title>
+    <style>
+      body
+      {
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        height: 100vh;
+        width: 100vw;
+        /* background: #000; */
+      }
+        button{
+            border-radius:100px;
+            height: 50px;
+            width: 50px;
+            font-size: 30px;
+            border:2px solid rgba(255, 0, 0, 0.466);
+        }
+    </style>
+</head>
+<body>
+    <label for="">Locatio</label>
+    <button onclick="getLocation()">
+        +
+    </button>
+    <iframe src="" frameborder="0"></iframe>
+    <script>
+        
+       function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    alert("Geolocation is not supported by this browser.");
+  }
+}
+
+function showPosition(x) {
+  var latitude = x.coords.latitude;
+  var longitude = x.coords.longitude;
+  var accuracy = x.coords.accuracy;
+
+  alert("Your latitude is " + latitude + " and your longitude is " + longitude + ".");
+  let url=`https://www.google.com/maps/place /${latitude},${longitude}`
+document.querySelector("iframe").src=url;
+// console.log(url)
+}
+
+  
+
+    </script>
+</body>
+</html>

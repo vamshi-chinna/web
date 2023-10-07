@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- external css file -->
+    <!-- <link  href="/index.css"> -->
+
+    <!-- this  is style section -->
+    <style>
+        * {
+ box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            overflow-x:hidden ;
+            text-transform: capitalize;
+            height: 100vh;
+            width: 100vw;
+            color: white;
+            background: linear-gradient(25deg, rgb(232, 23, 243), rgb(29, 3, 54));
+        }
+
+        span {
+            margin-left: 15px;
+            color: orange;
+            font-size: 50px;
+        }
+
+        header p {
+            letter-spacing: 3px;
+
+            font-size: 25px;
+        }
+
+        nav {
+            padding: 10px;
+            text-align: center;
+            background: linear-gradient(125deg, black, rgb(0, 183, 255));
+        }
+
+        a {
+
+            padding: 5px 10px;
+            margin: 0px 3px;
+            color: white;
+            text-decoration: none;
+
+        }
+
+        a:hover {
+            background: rgba(255, 255, 255, 0.584);
+            border-radius: 20px;
+            color: black;
+        }
+
+        aside {
+
+            width: 150px;
+            height: 99%;
+            overflow: hidden;
+            margin-right: 51px;
+            float: left;
+            text-align: center;
+            background: linear-gradient(rgba(137, 61, 142, 0.856), black);
+
+        }
+
+        aside a {
+            display: block;
+            width: 89px;
+            margin: 30px auto 10px;
+            padding: 5px 10px;
+            color: white;
+            text-decoration: none;
+
+        }
+
+
+
+        footer {
+            padding: 5px;
+            width: 100vw;
+            text-align: center;
+            display: inlineblock;
+            position: fixed;
+            bottom: 0;
+            background: #00000068;
+        }
+
+        section {
+            width: 100%;
+            height: 79%;
+        }
+
+        article {
+            padding-top: 20px;
+        }
+
+        .course-cards {
+            display: inline-block;
+            width: 82%;
+            padding: 5px;
+            word-wrap: none;
+            margin-bottom: 30px;
+            color: black;
+            border-radius: 3px;
+            background: linear-gradient(30deg, rgba(16, 185, 241, 0.571), rgba(19, 169, 97, 0.616));
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <p><span>J</span>spider Institute</p>
+            <nav>
+                <a href="">home</a>
+
+                <a href="">course</a>
+                <a href="">gellary</a>
+                <a href="">detailes</a>
+                <a href="">contact</a>
+            </nav>
+    </header>
+
+    <aside><a href="">java</a><br>
+        <a href="">Html</a><br>
+        <a href="">python</a><br>
+        <a href="">mySql</a><br>
+    </aside>
+    <section>
+        <article>
+            <h2>Course</h2>
+            <div class="course-cards">
+                <h3>java</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur mollitia, consequatur facilis
+                    eaque officia, ea ad est blanditiis sit officiis dolorem itaque, at pariatur tempore facere
+                    exercitationem praesentium quod aperiam.
+                </p>
+            </div>
+            <div class="course-cards">
+                <h3>python</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur mollitia, consequatur facilis
+                    eaque officia, ea ad est blanditiis sit officiis dolorem itaque, at pariatur tempore facere
+                    exercitationem praesentium quod aperiam.
+                </p>
+            </div>
+            <div class="course-cards">
+                <h3>html</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur mollitia, consequatur facilis
+                    eaque officia, ea ad est blanditiis sit officiis dolorem itaque, at pariatur tempore facere
+                    exercitationem praesentium quod aperiam.
+                </p>
+            </div>
+            <div class="course-cards">
+                <h3>mysql</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur mollitia, consequatur facilis
+                    eaque officia, ea ad est blanditiis sit officiis dolorem itaque, at pariatur tempore facere
+                    exercitationem praesentium quod aperiam.
+                </p>
+            </div>
+        </article>
+    </section>
+    <footer>
+        &copy belongs to bujji
+    </footer>
+</body>
+
+</html>

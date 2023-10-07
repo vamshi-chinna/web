@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculator</title>
+  <style>
+    body {
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+.calculater{
+  padding: 15px;
+  
+  box-shadow: -8px -5px 10px rgba(255, 255, 255, 0.53),3px 3px 4px rgba(255, 255, 255, 0.776);
+  margin: 2px auto 2px;
+   border:2px solid black ;
+    display: grid;
+    grid-gap: 4px;
+     grid-template-columns: auto auto auto auto ;
+    grid-template-rows: auto auto auto auto ; 
+    width: 300px;
+    border: 2px solid rgba(255, 255, 255, 0.676);
+
+   filter: drop-shadow(5px 5px 4px rgba(227, 231, 7, 0.721));
+    
+}
+#display {
+  color: white;
+  box-shadow:inset -3px -3px 24px rgba(255, 255, 255, 0.68);
+/* filter: drop-shadow(-5px -5px 4px rgba(255, 255, 255, 0.765)); */
+  height: 50px;
+  font-size: 24px;
+  text-align: right;
+  grid-column:1/5 ;
+  
+  width: 290px;
+ background:transparent;
+ 
+
+ outline: none;
+}
+
+
+button {
+  filter: drop-shadow(-2px -2px 2px rgba(255, 255, 255, 0.797));
+  border-radius:50px ;
+ padding: 20px;
+  font-size: 24px;
+}
+
+h1{
+  filter: drop-shadow(4px 4px 4px rgb(251, 255, 1));
+  color: white;
+}
+body{
+  background: #000;
+}
+
+#display:disabled{
+  
+  color: white;
+}
+
+
+.equal{
+  display: inline-block;
+ 
+ grid-column:2/5;
+}
+  </style>
+</head>
+<body>
+  <h1>Calculator</h1>
+  <div class="calculater">
+    <input type="text" id="display" disabled >
+    
+
+  <button onclick="display.value=''">AC</button>
+  <button onclick="display.value=display.value.slice(0,-1)">DEL</button>
+  <button onclick="add(1)">1</button>
+  <button onclick="add(2)">2</button>
+  <button onclick="add(3)">3</button>
+  <button onclick="add(4)">4</button>
+  <button onclick="add(5)">5</button>
+  <button onclick="add(6)">6</button>
+  <button onclick="add(7)">7</button>
+  <button onclick="add(8)">8</button>
+  <button onclick="add(9)">9</button>
+  <button onclick="add(0)">0</button>
+  <button onclick="add('.')">.</button>
+  <button onclick="add('+')">+</button>
+  <button onclick="add('-')">-</button>
+  <button onclick="add('*')">*</button>
+  <button onclick="add('/')">/</button>
+  <button  class="equal" onclick="calculate()">=</button>
+</div>
+  <!-- JavaScript -->
+  <script>
+    var display = document.getElementById("display");
+    function add(value) {
+ 
+  display.value += value;
+}
+
+function calculate() {
+  if(display.value===""){
+    alert("please enter the number");
+  }
+  else{
+
+    display.value =eval(display.value);
+  }
+}
+  </script>
+</body>
+</html>
